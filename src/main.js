@@ -12,9 +12,9 @@ document.querySelector('.winBtnMin').addEventListener("click", () => {
   appWindow.minimize()
 })
 
+let userID = "wearr"
 
-let userID = "Bob"
-function updateUserID() {
+async function updateUserID() {
     document.getElementById("userID").textContent = userID
 }
 updateUserID();
