@@ -1,6 +1,11 @@
 @font-face {
-  font-family: pro;
-  src: url(./Product.ttf);
+  font-family: pop;
+  src: url(./Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: rob;
+  src: url(./Roboto.ttf);
 }
 
 ::-webkit-scrollbar {
@@ -23,20 +28,13 @@ html {
 
 body {
   background-color: #191724;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: pop, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   padding: 0;
   margin: 0;
   color: #F2F2F2;
-  font-family: pro;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
@@ -68,8 +66,8 @@ header {
   padding: 4px 4px 4px 6px;
   -webkit-app-region: drag;
   height: 35px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 0px 0px 8px 8px;
+  transition: 200ms ease-in-out;
 }
 
 .NebVPNLogo {
@@ -118,7 +116,6 @@ header {
   font-weight: bold;
   cursor: pointer;
   transition: 200ms ease-in-out;
-  font-family: 'pro';
   font-size: 17px;
   -webkit-app-region: no-drag;
 }
@@ -177,7 +174,7 @@ header {
   position: absolute;
   left: 6px;
   top: calc(43px + 6px);
-  bottom: calc(6px);
+  bottom: calc(129px + 42px);
   width: 236px;
   border-radius: 8px;
   padding: 4px 7px;
@@ -228,7 +225,6 @@ li.server * {
 }
 
 .serverBtn {
-  font-family: pro;
   font-weight: bold;
   border: none;
   border-radius: 20px;
@@ -236,6 +232,7 @@ li.server * {
   cursor: pointer;
   transition: 200ms ease-in-out;
   box-shadow: inset 0 0 0 0 transparent;
+  font-family: rob;
 }
 
 .serverConnect {
@@ -277,23 +274,18 @@ li.server * {
   transition: ease-in-out 200ms;
 }
 
-.strongSignal .bar1,
-.strongSignal .bar2,
-.strongSignal .bar3 {
+.strongSignal .bar1, .strongSignal .bar2, .strongSignal .bar3 {
   fill: #81FF8D;
 }
-
-.weakSignal .bar1,
-.weakSignal .bar2 {
+.weakSignal .bar1, .weakSignal .bar2 {
   fill: #FFFA81;
 }
 
-.badSignal .bar1 {
+.badSignal .bar1{
   fill: #FF7272;
 }
 
-.badSignal .bar2,
-.badSignal .bar3 {
+.badSignal .bar2, .badSignal .bar3 {
   fill: #F2F2F2;
 }
 
@@ -306,26 +298,21 @@ li.server * {
   color: #81FF8D;
 }
 
-.settingsPanelC {
+.settingsPanel {
+  transition: 200ms ease-in-out;
   z-index: -1;
   opacity: 0;
-  transition: 200ms ease-in-out;
-  position: absolute;
-  inset: 0;
-}
-
-.settingsPanelC.show {
-  z-index: 2;
-  opacity: 1;
-  background-color: #000000a3;
-  backdrop-filter: blur(1px);
-}
-
-.settingsPanel {
   background-color: #353148;
   position: absolute;
-  inset: 109px;
-  border-radius: 8px;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  top: 42px;
+}
+
+.settingsPanel.show {
+  z-index: 2;
+  opacity: 1;
 }
 
 .topCont {
@@ -353,34 +340,52 @@ li.server * {
 
 .middleCont {
   position: absolute;
-  top: 100px;
+  top: 46px;
   left: 0;
   right: 0;
   padding: 4px 6px;
   display: flex;
-  justify-content: space-between;
-  font-size: 23px;
+  flex-wrap: wrap;
   align-items: center;
+  margin: 10px;
+  border-radius: 6px;
 }
 
-.midCont-checkbx {
-  margin-bottom: -2px;
-  height: 30px;
-  width: 30px;
-  margin-right: 40px;
+.settingsItem {
+  background-color: #524b72;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 8px;
+  gap: 8px;
 }
 
 .usageMenu {
   background-color: #353148;
   position: absolute;
-  right: 6px;
+  left: 6px;
   bottom: 6px;
-  width: 250px;
+  width: 236px;
   border-radius: 8px;
   padding: 4px 7px;
   display: flex;
   flex-direction: column;
   gap: 3px;
+}
+
+.usageTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.usageData {
+  display: flex;
+  flex-direction: column;
+}
+
+.usageDataItem {
+  display: flex;
+  justify-content: space-between;
 }
 
 .downloadUpload {
@@ -396,18 +401,15 @@ li.server * {
   flex-direction: column;
   padding: 4px 8px;
   background-color: #353148;
-  ;
   list-style: none;
   margin: 0;
   border-radius: 6px;
   gap: 6px;
   width: 250px;
 }
-
 .accSettings {
   color: white;
   background-color: #544D77;
-  font-family: pro;
   font-weight: bold;
   border: none;
   border-radius: 20px;
@@ -416,15 +418,12 @@ li.server * {
   transition: 200ms ease-in-out;
   box-shadow: inset 0 0 0 0 transparent;
 }
-
 .accSettings:hover {
   box-shadow: inset 0 0 0px 2px #ffffffb5;
 }
-
 .signOut {
   color: white;
   background-color: #ff7068;
-  font-family: pro;
   font-weight: bold;
   border: none;
   border-radius: 20px;
@@ -433,7 +432,60 @@ li.server * {
   transition: 200ms ease-in-out;
   box-shadow: inset 0 0 0 0 transparent;
 }
-
 .signOut:hover {
   box-shadow: inset 0 0 0px 2px #ffffffb5;
+}
+
+.contextMenu {
+  position: absolute;
+  background-color: #5f5786;
+  border-radius: 6px;
+}
+
+.contextMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+}
+
+.contextItem {
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-size: 17px;
+}
+
+.contextItem:hover {
+  background-color: #7369a7;
+}
+
+.contextItem.windowClose:hover {
+  background-color: #ff7068;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  position: relative;
+  background-color: #7e74ab;
+  width: 32px;
+  height: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  transition: 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  right: 18px;
+  height: 16px;
+  width: 16px;
+  transform: scale(1.2);
+  background-color: #dfd8ff;
+  border-radius: 14px;
+}
+
+input:checked[type="checkbox"]::before {
+  right: 0;
 }
