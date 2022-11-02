@@ -1,6 +1,7 @@
 const { appWindow } = window.__TAURI__.window
 
-await appWindow.center();
+appWindow.center();
+
 document.querySelector('.winBtnClose').addEventListener('click', () => {
   appWindow.close()
 });
