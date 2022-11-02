@@ -1,6 +1,12 @@
 const { appWindow } = window.__TAURI__.window
+const invoke = window.__TAURI__.invoke
 
-await appWindow.center();
+// testing rust connectivity!
+invoke('hello_world')
+
+
+appWindow.center();
+
 document.querySelector('.winBtnClose').addEventListener('click', () => {
   appWindow.close()
 });
