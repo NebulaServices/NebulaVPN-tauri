@@ -174,7 +174,7 @@ header {
   position: absolute;
   left: 6px;
   top: calc(43px + 6px);
-  bottom: calc(129px + 42px);
+  bottom: calc(129px + 12px);
   width: 236px;
   border-radius: 8px;
   padding: 4px 7px;
