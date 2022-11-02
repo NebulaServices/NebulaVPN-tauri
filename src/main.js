@@ -1,4 +1,9 @@
 const { appWindow } = window.__TAURI__.window
+const invoke = window.__TAURI__.invoke
+
+// testing rust connectivity!
+invoke('hello_world')
+
 
 appWindow.center();
 

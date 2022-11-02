@@ -9,9 +9,15 @@ fn greet(name: &str) -> String {
     format!("Hello, {}! You've been greeted from Rust!", name)
 }
 
+#[tauri::command]
+fn hello_rust() {
+  println!("I was invoked from JS!");
+}
+
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![greet])
+        .invoke_handler(tauri::generate_handler![hello_rust])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
