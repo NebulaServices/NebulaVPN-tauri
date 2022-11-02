@@ -11,6 +11,7 @@
     "version": "0.0.1"
   },
   "tauri": {
+
     "systemTray": {
       "iconPath": "./icons/Square310x310Logo.png",
       "iconAsTemplate": true,
