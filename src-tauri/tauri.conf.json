@@ -21,29 +21,27 @@
 
     "bundle": {
       "active": true,
-      "category": "vpn",
+      "targets": "all",
+      "identifier": "nebulaVPN",
+      "icon": [
+        "./icons/favicon.ico"
+      ],
+      "resources": [],
+      "externalBin": [],
       "copyright": "",
-
+      "category": "DeveloperTool",
+      "shortDescription": "",
+      "longDescription": "",
       "deb": {
         "depends": []
       },
-
-      "externalBin": [],
-      "icon": [
-        "icons/favicon.ico"
-      ],
-      "identifier": "org.nebvpn",
-      "longDescription": "",
       "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
         "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
+        "exceptionDomain": "",
+        "signingIdentity": null,
+        "entitlements": null,
+        "minimumSystemVersion": ""
       },
-      "resources": [],
-      "shortDescription": "",
-      "targets": "all",
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",

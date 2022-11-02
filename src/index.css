@@ -24,6 +24,8 @@
 html {
   height: 100%;
   margin: 0%;
+  overflow: hidden;
+  user-select: none;
 }
 
 body {
@@ -32,6 +34,8 @@ body {
   padding: 0;
   margin: 0;
   color: #F2F2F2;
+  overflow: hidden;
+  user-select: none;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -68,12 +72,14 @@ header {
   height: 35px;
   border-radius: 0px 0px 8px 8px;
   transition: 200ms ease-in-out;
+  user-select: none;
 }
 
 .NebVPNLogo {
   position: absolute;
   left: 6px;
   height: 18px;
+  user-select: none;
 }
 
 .connectionInfoC {
@@ -99,12 +105,14 @@ header {
   padding: 2px 10px;
   border-radius: 6px;
   color: #BEB3EE;
+  user-select: none;
 }
 
 .connection {
   color: #F2F2F2;
   font-weight: bold;
   font-size: 20px;
+  user-select: none;
 }
 
 .upgradeButton {
