@@ -70,7 +70,8 @@
         "minWidth": 800,
         "resizable": true,
         "title": "NebulaVPN",
-        "decorations": false
+        "decorations": false,
+        "skipTaskbar": true
       }
     ]
   }
