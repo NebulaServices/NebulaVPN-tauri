@@ -1,21 +1,12 @@
-const connected = document.querySelector('.connected');
-const serverConnect = document.querySelectorAll('.serverConnect');
-const settingsIcon = document.getElementById('settingsIco');
-const settingsPanel = document.querySelector('.settingsPanelC');
-const settingsClose = document.querySelector('.settingsClose');
-const header = document.querySelector("header.window-drag"); 
-
-settingsIcon.addEventListener("click", (e) => {
-    settingsPanel.classList.toggle("show");
-    if(settingsPanel.classList.contains("show")) {
-        header.style.borderRadius = "0";
-    } else if(!settingsPanel.classList.contains("show")) {
-        header.style.borderRadius = "0px 0px 8px 8px";
+class SettingsInterFace { 
+    constructor () {
+        this.saveAll = 'Incomplete'
+        this.saveByElementId = function (_id){
+           const element = document.getElementById(_id);
+           if (element.checked == true) {
+            return
+           }
+        }
     }
-});
-settingsClose.addEventListener("click", (e) => {
-    settingsPanel.classList.toggle("show");
-    if(!settingsPanel.classList.contains("show")) {
-        header.style.borderRadius = "0px 0px 8px 8px";
-    }
-  });
+}
+var settingsInterface = new SettingsInterFace();
