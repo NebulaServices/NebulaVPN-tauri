@@ -1,0 +1,97 @@
+.settingsPanelC {
+    z-index: -1;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    position: absolute;
+    inset: 0;
+  }
+  
+  .settingsPanelC.show {
+    z-index: 2;
+    opacity: 1;
+    background-color: #000000a3;
+    backdrop-filter: blur(1px);
+  }
+  
+  .settingsPanel {
+    background-color: #353148;
+    position: absolute;
+    inset: 109px;
+    border-radius: 8px;
+  }
+  
+  .topCont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 23px;
+    align-items: center;
+  }
+  
+  .settingsClose {
+    width: 24px;
+    height: 24px;
+    stroke: #9289c1;
+    stroke-width: 2px;
+    border: 2px solid #9289c1;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+  }
+  
+  .middleCont {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      padding: 4px 6px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 23px;
+      align-items: center;
+  }
+  .bottomCont {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 23px;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    position: relative;
+    background-color: #7e74ab;
+    width: 32px;
+    height: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]::before {
+    transition: 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    right: 18px;
+    height: 16px;
+    width: 16px;
+    transform: scale(1.2);
+    background-color: #dfd8ff;
+    border-radius: 14px;
+  }
+  
+  input:checked[type="checkbox"]::before {
+    right: 0;
+  }
+  
+  
+  .buildVer {
+    font-size: 10px;
+  }

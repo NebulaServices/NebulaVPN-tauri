@@ -5,6 +5,9 @@ const invoke = window.__TAURI__.invoke
 invoke('hello_world')
 
 
+
+
+
 appWindow.center();
 
 document.querySelector('.winBtnClose').addEventListener('click', () => {
@@ -42,9 +45,7 @@ header.addEventListener("mousedown", (e) => {
   if(e.button === 2) {
     contextMenu.innerHTML = `
       <ul class="contextList">
-        <li class="contextItem mini">Minimize</li>
-        <li class="contextItem maxi">Maximize</li>
-        <li class="contextItem windowClose">Close</li>
+        <li class="contextItem mini">About</li>
       </ul>
     `;
     const closeWindow = contextMenu.querySelector(".windowClose");
@@ -83,18 +84,5 @@ connected.addEventListener("mouseover", function() {
     };
 });
 
-settingsIcon.addEventListener("click", (e) => {
-  settingsPanel.classList.toggle("show");
-  if(settingsPanel.classList.contains("show")) {
-      header.style.borderRadius = "0";
-  } else if(!settingsPanel.classList.contains("show")) {
-      header.style.borderRadius = "0px 0px 8px 8px";
-  }
-});
 
-settingsClose.addEventListener("click", (e) => {
-  settingsPanel.classList.toggle("show");
-  if(!settingsPanel.classList.contains("show")) {
-      header.style.borderRadius = "0px 0px 8px 8px";
-  }
-});
+

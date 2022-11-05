@@ -5,10 +5,21 @@
   <meta charset="UTF-8" />
   <title>NebulaVPN</title>
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="settings.css" />
   <script src="main.js" type="module" defer></script>
+<script src="settings.js" type="module" defer></script> 
+  <script src="client.js" type="module" defer></script>
+  <script src="client.config.js"> </script>
+
+  <!-- <script src="visuals.js" type="module" defer></script> -->
+
 </head>
 
+
+</div> 
 <body>
+ 
+
   <header class="window-drag" data-tauri-drag-region>
     <svg class="NebVPNLogo" viewBox="0 0 652 94" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -60,7 +71,7 @@
           d="M24.548 0C21.471 0 18.717 1.48315 17 3.75843C16.123 2.59351 14.9842 1.64729 13.674 0.994878C12.3638 0.342468 10.9182 0.00182958 9.452 0C4.233 0 0 4.21348 0 9.42135C0 11.427 0.323 13.2809 0.884 15C3.57 23.427 11.849 28.4663 15.946 29.8483C16.524 30.0506 17.476 30.0506 18.054 29.8483C22.151 28.4663 30.43 23.427 33.116 15C33.677 13.2809 34 11.427 34 9.42135C34 4.21348 29.767 0 24.548 0Z"
           fill="#FF6060" />
       </svg>
-      <svg class="iconB settings" viewBox="0 0 44 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg href="#" id='settingsIco' class="iconB settings" viewBox="0 0 44 47" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M21.956 14.605C20.2715 14.605 18.6247 15.1009 17.2241 16.0301C15.8234 16.9592 14.7317 18.2797 14.0871 19.8248C13.4424 21.3698 13.2737 23.07 13.6024 24.7102C13.931 26.3504 14.7422 27.857 15.9334 29.0396C17.1246 30.2221 18.6422 31.0274 20.2944 31.3537C21.9466 31.6799 23.6591 31.5125 25.2155 30.8725C26.7718 30.2325 28.102 29.1487 29.0379 27.7582C29.9738 26.3677 30.4734 24.7329 30.4734 23.0606C30.4708 20.8188 29.5726 18.6696 27.9759 17.0844C26.3791 15.4992 24.2142 14.6076 21.956 14.605ZM21.956 28.4414C20.884 28.4414 19.8361 28.1258 18.9448 27.5346C18.0535 26.9433 17.3587 26.1029 16.9485 25.1197C16.5383 24.1365 16.4309 23.0546 16.6401 22.0108C16.8492 20.9671 17.3654 20.0083 18.1234 19.2558C18.8815 18.5033 19.8472 17.9908 20.8986 17.7832C21.95 17.5756 23.0398 17.6821 24.0302 18.0894C25.0206 18.4966 25.8671 19.1863 26.4627 20.0712C27.0583 20.956 27.3761 21.9964 27.3761 23.0606C27.3745 24.4872 26.803 25.8549 25.7869 26.8636C24.7707 27.8724 23.393 28.4398 21.956 28.4414Z"
           fill="white" />
@@ -141,23 +152,30 @@
         </li>
       </ul>
     </div>
+   
     <div class="settingsPanelC">
       <div class="settingsPanel">
-        <div class="topCont">
-          <h3>Settings</h3>
-          <svg class="settingsClose" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </div>
-        <div class="middleCont">
-          <div class="settingsItem">
-            <h3>Test Toggle</h3>
-            <input class="midCont-checkbx checkbx-toggle" type="checkbox">
+          <div class="topCont">
+              <h3>Settings</h3>
+              <svg class="settingsClose" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
           </div>
-        </div>
+          <div class="middleCont">
+            <div class="settingsItem">
+              <h3>Test Toggle</h3>
+              <input class="midCont-checkbx checkbx-toggle" type="checkbox">
+            </div>
+          </div>
+          <div class="bottomCont">
+            <div class="settingsItem">
+              <div class="buildVer"><b>Build: </b> <code style="background-color:#00000075;">pre-alpha v.0.0.1</code> <span id='verUTD' class="updateCheck"> (checking for newer version...)</span></div> 
+              
+             
+            </div>
+          </div>
       </div>
     </div>
     <div class="accMenu">

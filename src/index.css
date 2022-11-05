@@ -26,6 +26,9 @@ html {
   margin: 0%;
   overflow: hidden;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 body {
@@ -36,6 +39,9 @@ body {
   color: #F2F2F2;
   overflow: hidden;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -58,6 +64,7 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 6px;
   background-color: #191724;
   -webkit-app-region: no-drag;
+
 }
 
 
@@ -73,6 +80,9 @@ header {
   border-radius: 0px 0px 8px 8px;
   transition: 200ms ease-in-out;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .NebVPNLogo {
@@ -306,67 +316,6 @@ li.server * {
   color: #81FF8D;
 }
 
-.settingsPanel {
-  transition: 200ms ease-in-out;
-  z-index: -1;
-  opacity: 0;
-  background-color: #353148;
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  top: 42px;
-}
-
-.settingsPanel.show {
-  z-index: 2;
-  opacity: 1;
-}
-
-.topCont {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 4px 6px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 23px;
-  align-items: center;
-}
-
-.settingsClose {
-  width: 24px;
-  height: 24px;
-  stroke: #9289c1;
-  stroke-width: 2px;
-  border: 2px solid #9289c1;
-  border-radius: 50%;
-  padding: 4px;
-  cursor: pointer;
-}
-
-.middleCont {
-  position: absolute;
-  top: 46px;
-  left: 0;
-  right: 0;
-  padding: 4px 6px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 10px;
-  border-radius: 6px;
-}
-
-.settingsItem {
-  background-color: #524b72;
-  display: flex;
-  align-items: center;
-  border-radius: 6px;
-  padding: 8px;
-  gap: 8px;
-}
 
 .usageMenu {
   background-color: #353148;
@@ -473,30 +422,4 @@ li.server * {
 
 .contextItem.windowClose:hover {
   background-color: #ff7068;
-}
-
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  position: relative;
-  background-color: #7e74ab;
-  width: 32px;
-  height: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-input[type="checkbox"]::before {
-  transition: 0.2s ease-in-out;
-  content: "";
-  position: absolute;
-  right: 18px;
-  height: 16px;
-  width: 16px;
-  transform: scale(1.2);
-  background-color: #dfd8ff;
-  border-radius: 14px;
-}
-
-input:checked[type="checkbox"]::before {
-  right: 0;
 }
